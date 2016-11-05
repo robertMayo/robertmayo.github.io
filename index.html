@@ -11,9 +11,8 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="SA Demo" startnode="1" creator="Twine" creator-version="2.0.11" ifid="2CD097CB-03B5-400A-8089-D0ADFB51454D" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-passagedata pid="1" name="PLAYER SELECT" tags="" position="898.3333333333334,100">Who are you?
+<tw-storydata name="SA Demo" startnode="1" creator="Twine" creator-version="2.0.11" ifid="2CD097CB-03B5-400A-8089-D0ADFB51454D" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="PLAYER SELECT" tags="" position="595,108.33333333333334">Who are you?
 {
 	(link: &quot;Rivas&quot;)[(set: $name to &quot;Rivas&quot;)(set: $weapon to &quot;dagger&quot;)(set: $runCap to 6)(goto: &quot;start&quot;)] | 
 	(link: &quot;Ember&quot;)[(set: $name to &quot;Ember&quot;)(set: $weapon to &quot;dagger&quot;)(set: $runCap to 5)(goto: &quot;start&quot;)] | 
@@ -41,10 +40,10 @@ How long had you been walking? You twisted back your neck, the road winding a co
 	
 }
 [[Nevermind. Walk in silence-&gt;walk3]]</tw-passagedata>
-<tw-passagedata pid="4" name="walk2" tags="" position="1103.3333333333335,503.33333333333337">Not just your footsteps.
+<tw-passagedata pid="4" name="walk2" tags="" position="1103.3333333333335,506.6666666666667">Not just your footsteps.
 
-Others joined you in your mute march, five of them. 
-(if: $name is not &quot;Ember&quot;)[* A rogue-ish man.
+Others joined you in your mute march, four of them. 
+(if: $name is not &quot;Ember&quot;)[* A handsome man.
 ](if: $name is not &quot;Gladiola&quot;)[* A strong woman.
 ](if: $name is not &quot;Pasiune&quot;)[* A frail woman.
 ](if: $name is not &quot;Rivas&quot;)[* A scrawny, ragged man.
@@ -53,10 +52,11 @@ Wordlessly, you all walked the same path, none guiding the others. You had a str
 
 [[Speak-&gt;speak]] | [[Keep Walking-&gt;walk3]] | $inventory
 
-(click-append: &quot;frail woman&quot;)[ She had pale skin and short, blonde hair. She seemed almost starved.]
-(click-append: &quot;almost starved.&quot;)[ Her left eye had a black tattoo over it. You could tell she knew you were staring.]
-(click-append: &quot;ragged man.&quot;)[ He was Varisian, with tan skin and brown locks.]
-(click-append: &quot;brown locks.&quot;)[ He kept looking over his shoulders, avoiding eye contact. What was wrong with you?]</tw-passagedata>
+(click-append: &quot;frail woman.&quot;)[ She had pale skin and short, blonde hair. She seemed almost starved, yet maintained a frail beauty.](click-append: &quot;frail beauty.&quot;)[ Her left eye had a black tattoo over it. You could tell she knew you were staring.]
+(click-append: &quot;ragged man.&quot;)[ He was Varisian, with tan skin and brown locks.](click-append: &quot;brown locks.&quot;)[ He kept looking over his shoulders, avoiding eye contact but certainly monitoring you and the others.]
+(click-append: &quot;strong woman.&quot;)[ She had dark skin, black hair,  gripped a Lucerne Hammer.](click-append: &quot;Lucerne Hammer.&quot;)[ The weapon seems well used, and she wields it with an unsettling comfort.]
+(click-append: &quot;brunette woman.&quot;)[ The only among you who wasn&#39;t human. The changeling had striking eyes, green and blue.](click-append: &quot;green and blue.&quot;)[ She wrapped both arms around a starknife, as if it was all that held her together.]
+(click-append: &quot;handsome man.&quot;)[ He nervously spun a dagger in practiced motions. He was looking your direction.](click-append: &quot;your direction.&quot;)[ His head turns away as you try to meet his eyes. When your attention leaves him, you can tell he once more looks at you.]</tw-passagedata>
 <tw-passagedata pid="5" name="walk1" tags="" position="1103.3333333333335,368.33333333333337">You continue to walk aimlessly. You&#39;ve been here before. You&#39;re certain of it.
 
 This familiar, dim city had a strange, disturbing serenity to it. Orange clouds hung motionless in the enduring twilit sky.
@@ -105,7 +105,7 @@ I stood my ground as the cloud advanced.&quot;)As the cloud advanced, you held s
 (set:$timer to $timer+1)(display: &quot;timer&quot;)
 
 [[Fight]] | [[Check Inventory-&gt;inv]] | [[Flee]]</tw-passagedata>
-<tw-passagedata pid="10" name="timer" tags="" position="1700,316.6666666666667">(if: $timer is 0)[The sickly, mustard cloud matched your pace, chasing you. While the booming footsteps behind you were slow and measured, they seemed no more distant as you fled.](if: $timer is 1)[Behind the yellow fog, a figure took shape. A thin, contorted outline of a twisted human. As the sounds of it&#39;s steps grew louder, the mist crawled closer, advancing on you.](if: $timer is 2)[The mist parted as it battered against you. A mask of gray, leathery rags emerged, constricting a face not quite human. 
+<tw-passagedata pid="10" name="timer" tags="" position="1696.6666666666667,313.33333333333337">(if: $timer is 0)[The sickly, mustard cloud matched your pace, chasing you. While the booming footsteps behind you were slow and measured, they seemed no more distant as you fled.](if: $timer is 1)[Behind the yellow fog, a figure took shape. A thin, contorted outline of a twisted human. As the sounds of it&#39;s steps grew louder, the mist crawled closer, advancing on you.](if: $timer is 2)[The mist parted as it battered against you. A mask of gray, leathery rags emerged, constricting a face not quite human. 
 
 A mouth of sharpened, shattered teeth opened to a wide bloodied smile. The thin, twisting figure lurched forward, the gauzy, faded ribbons that bound it reaching towards you like tendrils.](if: $timer is 3)[The cloud consumed you.
 
@@ -148,16 +148,15 @@ Then I stopped running, and prepared to face the fog.&quot;)Your pace slowed, an
 (set:$timer to $timer+1)(display: &quot;timer&quot;)
 
 [[Fight]]| [[Check Inventory-&gt;inv]] | [[Flee]]</tw-passagedata>
-<tw-passagedata pid="15" name="Keep Running" tags="" position="1110,1305">(set: $story to $story+&quot;
+<tw-passagedata pid="15" name="Keep Running" tags="" position="1110,1306.6666666666667">(set: $story to $story+&quot;
 
-And ran.&quot;)You ran. 
+And ran.&quot;)(set: $runDeath to (random: 1,100))You ran. 
 
 (either: &quot;You didn&#39;t bother to look behind you.&quot;, &quot;You nearly tripped on the poorly maintained road. The cloud almost engulfs you before you manage to pull ahead.&quot;, &quot;You turned to the right, and the yellow cloud followed.&quot;, &quot;You turned to the left, and the golden fog chased after you&quot;, &quot;You felt almost out of breath, though you pressed onward.&quot;, &quot;In the moment you take to look behind yourself, the fog gained on you. You ran as fast as you could.&quot;)(set: $run to $run+1)
 
 In the fog behind you, whatever followed kept pace.(set:$flee to 4)
 
-{(if: $runCap &gt; $run)[ [[Keep Running]]]
-(else:)[ [[Keep Running-&gt;tired]]] | [[Stand your ground-&gt;stand your ground 2]]}</tw-passagedata>
+{(if: $runDeath &lt; 5)[ [[Keep Running-&gt;runDeath]] | [[Stand your ground-&gt;stand your ground 2]]](else:)[(if: $runCap is not $run)[ [[Keep Running]] ](else:)[ [[Keep Running-&gt;tired]] ]| [[Stand your ground-&gt;stand your ground 2]]]}</tw-passagedata>
 <tw-passagedata pid="16" name="inv" tags="" position="601.6666666666667,1005">While you couldn&#39;t remember what other belongings you had, you felt as though you had more when you checked yourself. 
 {
 	(if: $name is &quot;Ember&quot;)[(display: &quot;invEmber&quot;)]
@@ -211,11 +210,13 @@ You quickly drew your $weapon, nearly fumbling and dropping it on the ground.
 
 [[Check Inventory-&gt;inv]] | [[Fight-&gt;fightTired]] | Flee
 (click-replace: &quot;Flee&quot;)[You couldn&#39;t run any longer.]</tw-passagedata>
-<tw-passagedata pid="23" name="Fight" tags="" position="1525,1013.3333333333334">You drew your $weapon, fighting against the fear that told you to flee.
+<tw-passagedata pid="23" name="Fight" tags="" position="651.6666666666667,1495">(either: &quot;You fought against the fear that gnawed at you.&quot;, &quot;You tightened your grip on your &quot;+$weapon+&quot;.&quot;, &quot;You steadied your breath, preparing to strike.&quot;, &quot;You gulped, swallowing your growing despair.&quot;)
+
+(set: $timer to $timer+1)(display: &quot;timer&quot;)
 
 (either: &quot;You swung with all your might at the creature.&quot;, &quot;You made a deft slash at the advancing human-thing.&quot;, &quot;You stabbed your $weapon at the creature.&quot;) (either: &quot;The creature in the fog avoided your attack, though barely.&quot;, &quot;Your $weapons&#39;s blade pierced the monster, though within seconds its wound heals.&quot;, &quot;Your attack is met with a deep laughter as it glances off the contorted figure.&quot;)
 
-[[Fight]] | (if: $flee is 2)[[[Flee-&gt;flee2]](if: $flee is 3)[[[Flee-&gt;flee3]](else:)[[[Flee-&gt;Flee]] ]]</tw-passagedata>
+(if: $timer is not 3)[ [[Fight]] ](else:)[[[Fight-&gt;Die]] ]| (if: $flee is 2)[[[Flee-&gt;flee2]] ](else-if: $flee is 3)[[[Flee-&gt;flee3]] ](else:)[[[Flee-&gt;Flee]] ]</tw-passagedata>
 <tw-passagedata pid="24" name="fightTired" tags="" position="911.6666666666667,1486.6666666666667">(set: $timer to $timer+1)(display: &quot;timer&quot;)
 
 (either: &quot;With your dwindling strength, you swung your $weapon at the creature.&quot;, &quot;You stabbed at the fog weakly with your $weapon.&quot;, &quot;Your $weapon swept recklessly.&quot; )
@@ -229,11 +230,11 @@ It seemed to be playing a perverse game with you. It took another step forward.
 I attempted to fight the creature.&quot;)[[Fight-&gt;Die]]] | Flee
 (click-replace: &quot;Flee&quot;)[You couldn&#39;t run any longer.] | [[Check Inventory-&gt;inv]]</tw-passagedata>
 <tw-passagedata pid="25" name="inv???" tags="" position="468.33333333333337,1403.3333333333335"></tw-passagedata>
-<tw-passagedata pid="26" name="Die" tags="" position="705,1696.6666666666667">(set: $fightDeath to (random: 1,6))(if: $tired is true)[The monster avoided your final, weak strike.](else:)[The monster closed the gap.]
+<tw-passagedata pid="26" name="Die" tags="" position="705,1696.6666666666667">(set: $fightDeath to (random: 1,6))(if: $tired is true)[The monster avoided your final, weak strike.](else:)[The monster avoided your attack.]
 
 The creature leaned in, pausing for a moment.
 
-[[Death One-&gt;firstDeath]] | [[Death Two-&gt;secondDeath]] | [[Death Three-&gt;thirdDeath]] 
+[[Death One-&gt;firstDeath]] | [[Death Two-&gt;secondDeath]] | [[Death Three-&gt;thirdDeath]] | [[Death Four-&gt;fourthDeath]]
 
 
 
@@ -303,7 +304,7 @@ You were alone now in the swirling, yellow fog. While each pulse brought a sharp
 }
 
 (if: $actionTicker &lt; 2)[(if: $weapon is not false)[(link: &quot;Pick up &quot;+$weapon)[(set: $action to &quot;pick&quot;)(set: $weapon to false)(goto: &quot;secondDeathActions&quot;)] | ](link: &quot;Stand Still&quot;)[(set: $action to &quot;still&quot;)(goto: &quot;secondDeathActions&quot;)] | (link: &quot;Run&quot;)[(set: $action to &quot;run&quot;)(goto: &quot;secondDeathActions&quot;)]](else:)[(if: $weapon is not false)[(link: &quot;Pick up &quot;+$weapon)[(set: $action to &quot;pick&quot;)(goto: &quot;secondDeathEnd&quot;)] | ](link: &quot;Stand Still&quot;)[(set: $action to &quot;still&quot;)(goto: &quot;secondDeathEnd&quot;)] | (link: &quot;Run&quot;)[(set: $action to &quot;run&quot;)(goto: &quot;secondDeathEnd&quot;)]]</tw-passagedata>
-<tw-passagedata pid="31" name="secondDeathEnd" tags="" position="260,1901.6666666666667">{
+<tw-passagedata pid="31" name="secondDeathEnd" tags="" position="261.6666666666667,1901.6666666666667">{
 (if: $action is &quot;still&quot;)[You stood still. In the swirling yellow fog, perhaps you truly were alone. Your heart rate began to slow, though was interupted as a figure took shape before you.]
 
 (if: $action is &quot;pick&quot;)[Afraid the twisted, bandaged creature could return, you reached for your fallen $weapon. Leaning down, you felt unseen pressure against your neck, and hardly receive a moment to recoil before a figure took shape in front of you.]
@@ -389,9 +390,11 @@ I tried to offer help.&quot;)(set: $convo to &quot;help&quot;)(goto: &quot;third
 
 I tried to apologize.&quot;)(set: $convo to &quot;sorry&quot;)(goto: &quot;thirdDeathPartTwo&quot;)] | 
 	
-	(link: &quot;I said nothing.&quot;)[(set: $story to $story+&quot;
+(link: &quot;I said nothing.&quot;)[(set: $story to $story+&quot;
 
-I said nothing when I stabbed them.&quot;(set: $convo to &quot;nothing&quot;)(goto: &quot;thirdDeathPartTwo&quot;)]</tw-passagedata>
+I said nothing when I stabbed them.&quot;(set: $convo to &quot;nothing&quot;)(goto: &quot;thirdDeathPartTwo&quot;)]
+
+}</tw-passagedata>
 <tw-passagedata pid="34" name="thirdDeathPartTwo" tags="" position="238.33333333333334,2056.666666666667">{
 
 (if: $speakConvo is &quot;sorry&quot;)[&quot;&lt;b&gt;I&#39;m, there was- I was- S-Sorry,&lt;/b&gt;&quot; you sputtered.]
@@ -497,7 +500,9 @@ Their face contorted in anger as they smashed your head into the ground over and
 
 Still gripping your face, your other-self reverts in shape. It grows leaner, longer each time your skull crashes into the stones. It&#39;s hair and features fade away, and the fingers that gripped your head sprouted claws that cut into your face. As the bloody pool around your head grew, so did the creature&#39;s fury, continuing to slam your head into the ground until little remained.
 
-The creature rose, and walked away from the grisly remains of it&#39;s victim. As it left, the yellow fog rolled with it. ]</tw-passagedata>
+The creature rose, and walked away from the grisly remains of it&#39;s victim. As it left, the yellow fog rolled with it. 
+
+[[END]]]</tw-passagedata>
 <tw-passagedata pid="38" name="thirdDeathLeaveRun" tags="" position="308.33333333333337,2516.666666666667">(set: $story to $story+&quot;
 
 I tried to run, though was slain.&quot;)You turned to run, though your otherself seemed to anticipate your retreat. As you turned and began to ran, your $weapon cut into your back, blade covered in fresh blood once more.
@@ -510,8 +515,10 @@ With your trachea cut, you could not scream. As you bled a red river onto the co
 
 Your death wasn&#39;t slow, but neither was it quick. The sharp pain at your throat dulled as blood failed to reach your brain. Your vision wavered as you spit out the blood that pooled in your lungs. 
 
-Slowly, your body stopped moving. As your doppelganger left your body, so too did they leave your form. As the man-shaped thing in tattered clothing left, so did the rolling yellow fog. </tw-passagedata>
-<tw-passagedata pid="39" name="thirdDeathLeaveFight" tags="" position="458.33333333333337,2516.666666666667">(set: $story to $story+&quot;
+Slowly, your body stopped moving. As your doppelganger left your body, so too did they leave your form. As the man-shaped thing in tattered clothing left, so did the rolling yellow fog. 
+
+[[END]]</tw-passagedata>
+<tw-passagedata pid="39" name="thirdDeathLeaveFight" tags="" position="456.6666666666667,2516.666666666667">(set: $story to $story+&quot;
 
 I tried to fight, though was slain.&quot;)Without your weapon, your assault on the other-you was a wasted endeavor. As you swung a fist at them, they ducked, and jabbed your $weapon into your gut.
 
@@ -529,7 +536,7 @@ Your death wasn&#39;t slow, but neither was it quick. The sharp pain at your thr
 
 Slowly, your body stopped moving. As your doppelganger left your body, so too did they leave your form. As the man-shaped thing in tattered clothing left, so did the rolling yellow fog. 
 
-</tw-passagedata>
+[[END]]</tw-passagedata>
 <tw-passagedata pid="40" name="fourthDeath" tags="" position="601.6666666666667,2206.666666666667">(set: $story to $story+&quot;
 
 The creature took on the appearance of those I could not remember.&quot;)The creature shifted before your very eyes. The gaunt, inhuman being took on a familiar shapes, though could not quite settle onto a form.
@@ -583,31 +590,64 @@ And with the yellow fog behind you, so faded the fear. As you cut across cobbled
 After many minutes, you keeled over to catch your breath.](click-append:)
 
 </tw-passagedata>
-<tw-passagedata pid="42" name="runDeath" tags="" position="1355,1556.6666666666667">And you ran.
+<tw-passagedata pid="42" name="runDeath" tags="" position="1355,1556.6666666666667">(set: $story to $story+&quot;
+
+As I ran, I saw my reflection. The thing that followed me threw me though a window.&quot;)And you ran.
 
 Past the gray-brick buildings, you continued to run, not bothering to look behind you at the fog or the deafening pacing that emanated from within.
 
-You raced past the gray-brick walls, otherwise featureless blur during your sprint. You turn the corner.(click-append: &quot;the corner.&quot;)[
+You raced past the gray-brick walls, otherwise featureless blur during your sprint. You turned the corner.(click-append: &quot;the corner.&quot;)[
 
-You turned on your heel, running down the alley as the fog chased after you. You sprinted past abandoned homes, desolate businesses, forgotten keeps.](click-append: &quot;forgotten keeps.&quot;)[
+You turned on your heel, running down the alley as the fog chased after you. You sprinted past abandoned homes, desolate taverns, forgotten keeps.](click-append: &quot;forgotten keeps.&quot;)[
 
-Windows stretched on both sides of the street. The broken glass reveals emptiness witin the buildings, devoid of anything but walls. In the fractured, scattered pieces of glass, you spied your reflection.](click-append: &quot;your reflection.&quot;)[
+Wide, shattered windows stretched on both sides of the street, distorted portals  devoid of anything but walls walls chipping with faded paint.
 
-As you flitted past broken glass, you gained a feeling for what you looked like. Though either in pieces or distorted, you you began to piece together what you looked like. Your pace slowed as the windows became whole, until eventually, you stopped, watching your own reflection.](click-append: &quot;you looked like.&quot;)[
+Within the shattered panes, you saw fragments of yourself, and you pieced together what you looked like.{(if: $name is &quot;Ember&quot;)[You turned rogue-ish smile: you were surprisingly handsome, even as you were being chased.](if: $name is &quot;Gladiola&quot;)[You were built well, and had a charm not easily placed. Your had honest, large eyes.
+](if: $name is &quot;Pasiune&quot;)[You had short blonde hair, a tattoo on your eye, though kept a frail beauty.](if: $name is &quot;Rivas&quot;)[You were somewhat unkempt, and while your reflection stared back with suspicion, the two of you found ease.](if: $name is &quot;Eponine&quot;)[Your eyes were different coloured, a striking feature, and your face was framed by your brown locks.]}
 
-You realized you couldn&#39;t quite remember your appearance up until this moment. The familiar curves of your smile. The color of your eyes at dusk. The figure that stood behind you.(click-append: &quot;The figure that matched your paced.&quot;)[
+Your pace slowed as the windows became whole, until eventually, you stopped, watching your own reflection.](click-append: &quot;own reflection.&quot;)[
+
+You realized you couldn&#39;t quite remember your appearance up until this moment. The way your grin curled. The texture of you hair. The color of your eyes at dusk. The figure that stood behind you.](click-append: &quot;The figure that stood behind you.&quot;)[
 
 The figure wasn&#39;t part of your reflection so much as it haunted it. A contorted humanoid shape kept pace with you, bound by gray-yellow bandages, grinning a smile of sharp, craggy teeth. 
 
 Spied in the glass&#39; reflection, the creature&#39;s clawed hand reached toward you.](click-append: &quot;toward you.&quot;)[
 
-Enclosing it&#39;s long fingers over the back of yout skull, you helpless watched as your head crashed through than glass.
+Enclosing it&#39;s long fingers over the back of yout skull, you helplessly watched as your head met with your reflection&#39;s, crashing through the glass, tumbling into the empty building. 
 
-Your forehead bled profusely. Sharp, shattered pieces of glass fell within the empty building, breaking as they struck the ground. The shared reflected your now-broken nose, blood
+Your forehead bled profusely, and shattered glass shards cut into your hands as you tried to break your fall. You pressed your body against the wall, holding your $weapon with a nervous, trembling grip.
 
-You drew your head back into the cobbled alley.](click-append: &quot;back into the cobbled alley.&quot;)[
+You waited.](click-append: &quot;You waited.&quot;)[
 
-Head pounding from the impact, you looked around yourself for your assailant. Whatever monster was once there had now disappeared, your broken glass and blood the only evidence of it&#39;s arrival.]</tw-passagedata>
+And waited.](click-append: &quot;And waited.&quot;)[
+
+And waited, until blood trickled down your face, running in a thin stream down your brow, over your (if: $name is &quot;Pasiune&quot;)[tattooed ](if: $name is &quot;Eponine&quot;)[emerald-colored ]eye. Wiping the smood into a thick smear, you peeked out the window.](click-append: &quot;out the window.&quot;)[
+
+You saw nothing. The only evidence of the creature that attacked you was the broken pane you were sent through.
+
+[[Wait-&gt;runDeathWait]] | [[Return to the Cobbled Roads-&gt;runDeathReturn]]]</tw-passagedata>
+<tw-passagedata pid="43" name="runDeathWait" tags="" position="1355,1708.3333333333335">(if: $story contains &quot;I waited in the building.&quot;)[(set: $story to $story+&quot; And waited.&quot;)](else:)[(set: $story to $story+&quot;
+
+I waited in the building.&quot;)]
+
+(either: &quot;You heard nothing from outside.&quot;, &quot;You tried to maintain steady breathing.&quot;, &quot;You wipe the blood from your brow once more.&quot;, &quot;You try to tell yourself it will be okay.&quot;, &quot;Your trembling hands grip your weapon.&quot;, &quot;You wondered if the yellow fog will catch you if you remain still.&quot;, &quot;You questioned whether you&#39;d be able to outrun the creature.&quot;, &quot;You wondered if perhaps it went after the others instead.&quot;)
+
+[[Continue to Wait-&gt;runDeathWait]] | [[Return to the Cobbled Streets-&gt;runDeathReturn]]</tw-passagedata>
+<tw-passagedata pid="44" name="runDeathReturn" tags="" position="1505,1706.6666666666667">You crawled back through the window, warily entering the street. You looked to your left.
+
+(click-append: &quot;your left&quot;)[, though saw nothing but gray-yellow bricks, shattered glass panes, and the cobbled path you came from.
+
+You looked to your right](click-append: &quot;your right&quot;)[, but again, nothing was there.
+
+You didn&#39;t dare sheathe your $weapon. Constantly peeking over your shoulder, you advanced with slow, careful steps. 
+
+Something was watching you, you could hear it.](click-replace: &quot;it.&quot;)[it: the faint rustling of clothes. A creeping, sluggish breathing under your quick, panicked ones. 
+
+Then, a low chuckle. You turned around to face what it came from.](click-append: &quot;what it came from.&quot;)[
+
+Though it was not behind you. You took another step, your dragging feet brushing against a shard of glass.](click-append: &quot;shard of glass.&quot;)[
+
+The shard reflected the stagnant golden clouds hanging in the twilit sky. ]</tw-passagedata>
 </tw-storydata>
 
 
