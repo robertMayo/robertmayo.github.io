@@ -276,7 +276,7 @@ With a crushing snap, the bone seems to crack. Your $weapon drops from your hand
 
 You were alone now in the swirling, yellow fog. While each pulse brought a sharp pain to your broken arm, you were otherwise fine.
 
-{(link: &quot;Pick up &quot;+$weapon)[(set: $action to &quot;pick&quot;)(set: $weapon to false)(goto: &quot;secondDeathActions&quot;)]
+{(link: &quot;Pick up &quot;+$weapon)[(set: $action to &quot;pick&quot;)(set: $weaponHold to false)(goto: &quot;secondDeathActions&quot;)]
 
 | 
 
@@ -296,21 +296,21 @@ You were alone now in the swirling, yellow fog. While each pulse brought a sharp
 
 (else-if: $action is &quot;still&quot; and $actionTicker is 2)[You thought you spied something&#39;s sillouette, though it appeared the fog was playing tricks on you.]
 
-(if: $action is &quot;pick&quot;)[Afraid the twisted, bandaged creature could return, you reached for your fallen $weapon. It seemed nowhere in sight, seemingly disappearing when it fell. You swear you hear a raspy chortling nearby.]
+(if: $action is &quot;pick&quot;)[Afraid the twisted, bandaged creature could return, you reached for your fallen $weapon. It seemed nowhere in sight, seemingly disappearing when it fell. You swore you heard a raspy chortling nearby.]
 
 (if: $action is &quot;run&quot;)[(set: $actionTicker to 3)Gripping your broken arm, you turn to run out of the mist.]
 }
 
-(if: $actionTicker &lt; 2)[(if: $weapon is not false)[(link: &quot;Pick up &quot;+$weapon)[(set: $action to &quot;pick&quot;)(set: $weapon to false)(goto: &quot;secondDeathActions&quot;)] | ](link: &quot;Stand Still&quot;)[(set: $action to &quot;still&quot;)(goto: &quot;secondDeathActions&quot;)] | (link: &quot;Run&quot;)[(set: $action to &quot;run&quot;)(goto: &quot;secondDeathActions&quot;)]](else:)[(if: $weapon is not false)[(link: &quot;Pick up &quot;+$weapon)[(set: $action to &quot;pick&quot;)(goto: &quot;secondDeathEnd&quot;)] | ](link: &quot;Stand Still&quot;)[(set: $action to &quot;still&quot;)(goto: &quot;secondDeathEnd&quot;)] | (link: &quot;Run&quot;)[(set: $action to &quot;run&quot;)(goto: &quot;secondDeathEnd&quot;)]]</tw-passagedata>
+(if: $actionTicker &lt; 2)[(if: $weaponHold is not false)[(link: &quot;Pick up &quot;+$weapon)[(set: $action to &quot;pick&quot;)(set: $weaponHold to false)(goto: &quot;secondDeathActions&quot;)] | ](link: &quot;Stand Still&quot;)[(set: $action to &quot;still&quot;)(goto: &quot;secondDeathActions&quot;)] | (link: &quot;Run&quot;)[(set: $action to &quot;run&quot;)(goto: &quot;secondDeathActions&quot;)]](else:)[(if: $weapon is not false)[(link: &quot;Pick up &quot;+$weapon)[(set: $action to &quot;pick&quot;)(goto: &quot;secondDeathEnd&quot;)] | ](link: &quot;Stand Still&quot;)[(set: $action to &quot;still&quot;)(goto: &quot;secondDeathEnd&quot;)] | (link: &quot;Run&quot;)[(set: $action to &quot;run&quot;)(goto: &quot;secondDeathEnd&quot;)]]</tw-passagedata>
 <tw-passagedata pid="31" name="secondDeathEnd" tags="" position="261.6666666666667,1901.6666666666667">{
 (if: $action is &quot;still&quot;)[You stood still. In the swirling yellow fog, perhaps you truly were alone. Your heart rate began to slow, though was interupted as a figure took shape before you.]
 
 (if: $action is &quot;pick&quot;)[Afraid the twisted, bandaged creature could return, you reached for your fallen $weapon. Leaning down, you felt unseen pressure against your neck, and hardly receive a moment to recoil before a figure took shape in front of you.]
 
-(if: $action is &quot;run&quot;)[You ran for hardly a moment before you slam into something unseen, tripping onto the ground. A low laughter rumbles nearby, and a figure took shape over you.]
+(if: $action is &quot;run&quot;)[You ran for hardly a moment before you slam into something unseen, tripping onto the ground. A low laughter rumbled nearby, and a figure took shape over you.]
 }
 
-The contorted, bound figure did not return visible all at once. First it&#39;s wicked smile stretched mere inches in front of your own face. Then it&#39;s narrow, lanky body revealed to be almost wrappung around you, like a snake to constrict it&#39;s pray. 
+The contorted, bound figure did not return visible all at once. First it&#39;s wicked smile stretched mere inches in front of your own face. Then it&#39;s thin body revealed to be almost wrapping around you, like a snake to constrict it&#39;s prey. 
 
 Lastly, it&#39;s arm appeared, coiled muscle leading to the broken iron shackles at it&#39;s wrists, leading to the open, clawed hand hovering just over your throat.
 
@@ -318,28 +318,26 @@ Lastly, it&#39;s arm appeared, coiled muscle leading to the broken iron shackles
 
 The creature dug its fingers into your neck, lifting you off of your feet. Four nails tore into your neck, while a sharp, ragged thumb nail pierces your throat.
 
-As the blood trickled down your chest, the creature brought it&#39;s second hand to your neck. Air no longer filling your lungs, and blood pooling dripping out your mouth, the only sounds within the fog were the hopeless kicking of your feet against your assailant, and the low gurgling of blood welling in your throat.
+As the blood trickled down your chest, the creature brought it&#39;s second hand to your neck. Blood filled your lungs, and the only sounds within the fog were the hopeless kicking of your feet against your assailant, and the low gurgling of blood welling in your throat.
 
 Slowly, your heart began to slow. Though your eyes bulged, your vision slipped away. Your thrashing calmed until you were slow outside the occassional, slow twitch.]
 
 (click-append: &quot;twitch.&quot;)[
 
-Your senses all faded.
-
-...]
+Your senses faded...]
 (click-replace: &quot;...&quot;)[......]
 (click-replace: &quot;......&quot;)[.........]
 (click-replace: &quot;.........&quot;)[
 
 Your senses returned as you cough out the blood your nearly choked on. Heavy, frantic breathes for air are accompanied by quick gulps of welling blood. 
 
-You were sitting, slumped over, legs dangling over a flat rooftop overlooking an alley filled with a dancing yellow fog from five or so stories. From your vantage point, this dim, lost city seemed endless. Thousands of gray-brick building stretched endlessly, slowly morphing into the twilit sky.]
+You were sitting, slumped over, legs dangling over a flat rooftop overlooking an alley filled with a dancing yellow fog from five or so stories. From your vantage point, this dim, lost city seemed endless. Thousands of gray-brick building stretched into the horizon, slowly morphing into the twilit sky.]
 
 (click-append: &quot;twilit sky.&quot;)[
 
 In a way, it was strangely beautiful.
 
-You felt something press against your back, softly pushing you off of the ledge. Had you more energy, perhaps you could have resisted. Limply, you body tumbles off the building, hurled ot the ground below.
+You felt something press against your back, softly pushing you off of the ledge. Had you more energy, perhaps you could have resisted. Limply, you body tumbles off the building, hurled to the ground below.
 
 You couldn&#39;t scream as you fell, too much blood in your throat. You passed through the yellow fog in mere moments and collided with an obscured, cobblestone road. 
 
