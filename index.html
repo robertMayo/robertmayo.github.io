@@ -227,8 +227,7 @@ It seemed to be playing a perverse game with you. It took another step forward.
 
 I attempted to fight off the man in tatters.&quot;)(set: $fightDeath to (random: 1,4))(if: $tired is true)[The monster avoided your final, weak strike.](else:)[The monster avoided your attack.]
 
-The creature leaned in, (link: &quot;pausing for a moment&quot;)[(if: $fightDeath is 1)[(goto: &quot;firstDeath&quot;)][(if: $fightDeath is 2)[(goto: &quot;secondDeath&quot;)][(if: $fightDeath is 3)[(goto: &quot;thirdDeath&quot;)](if: $fightDeath is 4)[(goto: &quot;fourthDeath&quot;)]]
-$fightDeath</tw-passagedata>
+The creature leaned in, (link: &quot;pausing for a moment&quot;)[(if: $fightDeath is 1)[(goto: &quot;firstDeath&quot;)][(if: $fightDeath is 2)[(goto: &quot;secondDeath&quot;)][(if: $fightDeath is 3)[(goto: &quot;thirdDeath&quot;)](if: $fightDeath is 4)[(goto: &quot;fourthDeath&quot;)]]</tw-passagedata>
 <tw-passagedata pid="27" name="firstDeath" tags="" position="513.3333333333334,1711.6666666666667">(set: $story to $story+&quot;
 
 And then I was hacked to pieces.&quot;)The creature produced a wicked razor from its tattered clothing. It was barbed along its long, curved blade.
