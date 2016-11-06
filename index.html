@@ -221,7 +221,7 @@ It seemed to be playing a perverse game with you. It took another step forward.
 
 (if: $timer &lt; 4)[[[Fight-&gt;fightTired]]](else:)[ [[Fight-&gt;Die]]] | Flee(click-replace: &quot;Flee&quot;)[You couldn&#39;t run any longer] | [[Check Inventory-&gt;inv]]</tw-passagedata>
 <tw-passagedata pid="25" name="inv???" tags="" position="468.33333333333337,1403.3333333333335"></tw-passagedata>
-<tw-passagedata pid="26" name="Die" tags="" position="705,1696.6666666666667">(set: $story to $story+&quot;
+<tw-passagedata pid="26" name="Die" tags="" position="703.3333333333334,1696.6666666666667">(set: $story to $story+&quot;
 
 I attempted to fight off the man in tatters.&quot;)(set: $fightDeath to (random: 1,6))(if: $tired is true)[The monster avoided your final, weak strike.](else:)[The monster avoided your attack.]
 
@@ -496,7 +496,7 @@ The creature rose, and walked away from the grisly remains of it&#39;s victim. A
 [[END]]]</tw-passagedata>
 <tw-passagedata pid="38" name="thirdDeathLeaveRun" tags="" position="308.33333333333337,2516.666666666667">(set: $story to $story+&quot;
 
-I tried to run, though was slain.&quot;)You turned to run, though your otherself seemed to anticipate your retreat. As you turned and began to ran, your $weapon cut into your back, blade covered in fresh blood once more.(click-append: &quot;once more.&quot;)[
+I tried to run, though was slain by my doppelganger.&quot;)You turned to run, though your otherself seemed to anticipate your retreat. As you turned and began to ran, your $weapon cut into your back, blade covered in fresh blood once more.(click-append: &quot;once more.&quot;)[
 
 You stumbled, tripping to the ground. Your doppelganger grinned widely, tossing your $weapon to the ground. They drew their own weapon, flicking a war razor from it&#39;s sheathe, it&#39;s curved blade spiked.
 
@@ -511,7 +511,7 @@ Slowly, your body stopped moving. As your doppelganger left your body, so too di
 [[END]]]</tw-passagedata>
 <tw-passagedata pid="39" name="thirdDeathLeaveFight" tags="" position="455,2516.666666666667">(set: $story to $story+&quot;
 
-I tried to fight, though was slain.&quot;)Without your weapon, your assault on the other-you was a wasted endeavor. As you swung a fist at them, they ducked, and jabbed your $weapon into your gut.(click-append: &quot;into your gut.&quot;)[
+I tried to fight, though was slain by my doppelganger.&quot;)Without your weapon, your assault on the other-you was a wasted endeavor. As you swung a fist at them, they ducked, and jabbed your $weapon into your gut.(click-append: &quot;into your gut.&quot;)[
 
 Your doppelganger&#39;s grip on the weapon loosened as you took a step back. You staggered, removing the weapon from the very spot that you had struck $fake, dropping to your knees just as they had.
 
@@ -542,13 +542,13 @@ The shapeshifting creature took on another form.
 
 Again, it became something incomplete. A man, this time, stocky, somewhat unkempt, somewhat charming, but otherwise a blur. Again, he was familiar, though still you could not quite place who he was. A friend? A friend of a friend?
 
-&lt;b&gt;&quot;-rememeber anything, you-&lt;/b?&gt;&quot;
+&lt;b&gt;&quot;-rememeber anything, you-&lt;/b&gt;&quot;
 
 Once more, the creature changed.]
 
 (click-append: &quot;creature changed.&quot;)[
 
-Another man, you thought. He swelled in size, doubling in the very least. His eyes became shrouded, and his beard grew large. Your feeling on this man was strange - there was a strange feeling of loyalty, yet also a strong repulsion, a visceral hatred.
+Another man, you thought. He swelled in size, doubling in the very least. His eyes became shrouded, and his beard grew large. He inspired crossed emotions - there was a strange feeling of loyalty, yet also a strong repulsion, a visceral hatred.
 
 &lt;b&gt;&quot;-pitiful person?&lt;/b&gt;
 
@@ -562,7 +562,7 @@ You fell backward, and you dropped your $weapon as you began to crawl away from 
 </tw-passagedata>
 <tw-passagedata pid="41" name="fourthDeathFlee" tags="" position="601.6666666666667,2356.666666666667">(set: $story to $story+&quot;
 
-Consumed by fear, I ran, until the creature grabbed me just outside of the yellow fog.&quot;)You rose to your feet, sprinting away as the creature threw it&#39;s tantum. You ran.
+Consumed by fear, I ran until I escaped the yellow fog. The man in tatters broke my neck, and left me for dead.&quot;)You rose to your feet, sprinting away as the creature threw it&#39;s tantum. You ran.
 
 (click-append: &quot;You ran.&quot;)[
 
@@ -578,9 +578,31 @@ Though the swirling cloud rolled forward, you were faster, fueled by adrenaline 
 
 And with the yellow fog behind you, so faded the fear. As you cut across cobbled alleys and avenues, the fog seemed to disappear, though you gave hardly a moment to turn back to see if that was the case.
 
-After many minutes, you keeled over to catch your breath.](click-append:)
+After many minutes, you keeled over to catch your breath.](click-append: &quot;catch your breath.&quot;)[
 
-</tw-passagedata>
+Breathe in.](click-append: &quot;Breathe in.&quot;)[
+
+Breathe out.](click-append: &quot;Breathe out.&quot;)[
+
+Footsteps began to pound the dim, forgotton city once more. The yellow fog, and the creatured that lurked within, were nowhere to be seen.
+
+The footsteps grew louder.](click-append: &quot;grew louder.&quot;)[
+
+And louder.](click-append: &quot;And louder.&quot;)[
+
+And louder, until you felt something press against the back of your spine.
+
+What energy you still had vanished, consumed by the touch of the creature behind you. Sluggish now, you turned to the man in tatters as it enclosed two hands over your face.](click-append: over your face.)[
+
+While largely devoid of facial features, the man in tatters now appeared composed. It lifted you off your feet, and examined you with a strange curiosity. 
+
+Uncermoniously, it ended it&#39;s investigation with a cruel snap to your neck. It tossed your body to the floor, watching almost hopefully for another surprise.(click-append: &quot;another surprise.&quot;)[
+
+With your neck broken, you could not breathe, you could not move. Your eyes moved in a panic, searching for something, anything that could save you. Before you could expire, the man in tattered abandoned your limp body.
+
+Your vision wavered, fading as the yellow fog disappeared and the dim, forgotten city once more returned.
+
+[END]]]</tw-passagedata>
 <tw-passagedata pid="42" name="runDeath" tags="" position="1355,1556.6666666666667">(set: $story to $story+&quot;
 
 As I ran, I saw my reflection. The thing that followed me threw me though a window.&quot;)And you ran.
